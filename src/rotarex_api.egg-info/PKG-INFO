@@ -1,12 +1,12 @@
 Metadata-Version: 2.4
 Name: rotarex-dimes-srg-api
-Version: 0.1.0
+Version: 0.1.1
 Summary: Async Python client for Rotarex DIMES SRG API
 Author-email: ROTAREX <develop@rotarex.com>
 Project-URL: Homepage, https://github.com/Rotarex/rotarex-dimes-srg-api
 Project-URL: Repository, https://github.com/Rotarex/rotarex-dimes-srg-api
 Project-URL: Issues, https://github.com/Rotarex/rotarex-dimes-srg-api/issues
-Requires-Python: >=3.10
+Requires-Python: >=3.9
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Requires-Dist: aiohttp>=3.9.0
