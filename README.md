@@ -19,7 +19,7 @@ Here is a simple example of how to use the Rotarex API client:
 ```python
 import asyncio
 import aiohttp
-from rotarex_dimes_srg_api import RotarexApi
+from rotarex-dimes-srg-api import RotarexApi
 
 async def main():
     async with aiohttp.ClientSession() as session:
