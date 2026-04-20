@@ -7,6 +7,7 @@ from typing import Any
 import aiohttp
 
 from .exceptions import InvalidAuth
+from .models import RotarexTank
 
 
 class RotarexApi:
@@ -62,7 +63,7 @@ class RotarexApi:
             return True
         return datetime.now(timezone.utc) >= self.expires_at
 
-    async def fetch_tanks(self) -> list[dict[str, Any]]:
+    async def fetch_tanks(self) -> list[RotarexTank]:
         """Fetch tanks from Rotarex API."""
         if not self.access_token or self.token_expired():
             if self._email and self._password:
@@ -88,7 +89,9 @@ class RotarexApi:
                     timeout=15,
                 ) as retry_resp:
                     retry_resp.raise_for_status()
-                    return await retry_resp.json()
+                    raw: list[dict[str, Any]] = await retry_resp.json()
+                    return [RotarexTank.from_dict(t) for t in raw if "Guid" in t]
 
             resp.raise_for_status()
-            return await resp.json()
+            raw = await resp.json()
+            return [RotarexTank.from_dict(t) for t in raw if "Guid" in t]
