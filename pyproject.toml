@@ -21,6 +21,6 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Rotarex/rotarex-dimes-srg-api"
-Repository = "https://github.com/Rotarex/rotarex-dimes-srg-api"
-Issues = "https://github.com/Rotarex/rotarex-dimes-srg-api/issues"
+Homepage = "https://github.com/Rotarex-Innovation/rotarex-dimes-srg-api"
+Repository = "https://github.com/Rotarex-Innovation/rotarex-dimes-srg-api"
+Issues = "https://github.com/Rotarex-Innovation/rotarex-dimes-srg-api/issues"
